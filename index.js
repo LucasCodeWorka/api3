@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 // Exemplo de rota para consulta no banco de dados
 app.get('/consultar-dados', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM vr_ger_empresa');
+    const result = await pool.query('SELECT * FROM public.vendas_rep');
     res.json(result.rows);
   } catch (error) {
     console.error('Erro na consulta ao banco de dados:', error);
