@@ -1,11 +1,15 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: 'liebe_ro',
-  host: 'dbexp.vcenter.com.br',
+  user: 'LucasCodeWorka',
+  password: 'IO24VirZxBgc',
+  host: 'ep-weathered-king-a59769hv.us-east-2.aws.neon.tech',
+  port: '5432',
   database: 'liebe',
-  password: '%eTS$33qPO8XZNMc',
-  port: 20168
+  ssl: {
+    rejectUnauthorized: false,
+    sslmode: 'require'
+  }
 });
 
 module.exports = pool;
